@@ -8,10 +8,7 @@ private:
 T x[20];
 int f, l;
 public:
-TPQueue() {
-f= 0;
-l = 0;
-}
+TPQueue() : f(0), l(0) {}
 void push(T value) {
 int i = l++;
 while ((x[i % size].prior < value.prior) && (--i >= f)) {
